@@ -1,0 +1,28 @@
+[user]
+	email = oliverjhernandez@gmail.com
+	name = oliverjhernandez
+[core]
+	editor = vim
+	excludesfile = /Users/olhernandez/.gitignore
+    ; pager = cat
+[alias]
+	unstage = reset HEAD --
+	co = checkout
+	cost = checkout staging
+	codv = checkout dev
+	coma = checkout main
+  pdv = pull origin dev 
+  pst = pull origin staging 
+  pma = pull origin main
+	br = branch
+	st = status
+	ci = commit
+	p = push
+	d = diff
+  a = add
+  ll = log --oneline
+  lola = log --graph --decorate --pretty=oneline --abbrev-commit --all --date=local
+[pull]
+	rebase = false
+[init]
+	defaultBranch = main
