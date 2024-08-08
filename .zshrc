@@ -110,3 +110,5 @@ nvm use --silent default
 
 # Exports
 export EDITOR="nvim"
+
+export JAVA_HOME=`/usr/libexec/java_home -v 17`
