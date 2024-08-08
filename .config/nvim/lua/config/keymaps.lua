@@ -50,16 +50,16 @@ keymap.set("t", "<C-\\>", "<C-\\><C-n><C-w>l")
 
 -- Diagnostics
 keymap.set("n", "<leader>j", function()
-	vim.diagnostic.goto_next()
+  vim.diagnostic.goto_next()
 end, opts)
 
 keymap.set("n", "<leader>k", function()
-	vim.diagnostic.goto_prev()
+  vim.diagnostic.goto_prev()
 end)
 
 -- Neogen
 keymap.set("n", "<leader>cc", function()
-	require("neogen").generate()
+  require("neogen").generate({})
 end)
 
 -- Inc Rename
@@ -67,10 +67,10 @@ vim.keymap.set("n", "<leader>rn", ":IncRename ")
 
 -- dial
 vim.keymap.set("n", "<C-a>", function()
-	require("dial.map").manipulate("increment", "normal")
+  require("dial.map").manipulate("increment", "normal")
 end)
 vim.keymap.set("n", "<C-x>", function()
-	require("dial.map").manipulate("decrement", "normal")
+  require("dial.map").manipulate("decrement", "normal")
 end)
 
 -- telescope
@@ -79,47 +79,47 @@ local telescope = require("telescope")
 
 -- General search in the whole repo
 vim.keymap.set("n", "ff", function()
-	builtin.find_files()
+  builtin.find_files()
 end)
 
 -- "Searches for the string under your cursor or selection in your current working directory"
 vim.keymap.set("n", "fS", function()
-	builtin.grep_string()
+  builtin.grep_string()
 end)
 
 -- "Lists available colorschemes and applies them on <cr>"
 vim.keymap.set("n", ";c", function()
-	builtin.colorscheme()
+  builtin.colorscheme()
 end)
 
 -- "Lists normal mode keymappings"
 vim.keymap.set("n", ";k", function()
-	builtin.keymaps()
+  builtin.keymaps()
 end)
 
 -- "Lists open buffers",
 vim.keymap.set("n", "\\\\", function()
-	builtin.buffers()
+  builtin.buffers()
 end)
 
 -- "Resume the previous telescope picker",
 vim.keymap.set("n", ";;", function()
-	builtin.resume()
+  builtin.resume()
 end)
 
 -- "Lists Diagnostics for all open buffers or a specific buffer",
 vim.keymap.set("n", "fd", function()
-	builtin.diagnostics()
+  builtin.diagnostics()
 end)
 
 -- "Lists Function names, variables, from Treesitter",
 vim.keymap.set("n", "fs", function()
-	builtin.treesitter()
+  builtin.treesitter()
 end)
 
 -- "Lists all lsp symbols"
 vim.keymap.set("n", "ss", function()
-	builtin.lsp_document_symbols()
+  builtin.lsp_document_symbols()
 end)
 
 -- "Lists harpoon files"
@@ -130,20 +130,20 @@ vim.keymap.set("n", "fj", "<cmd>Telescope jsonfly<cr>")
 
 -- "Open File Browser with the path of the current buffer",
 vim.keymap.set("n", "-", function()
-	local function telescope_buffer_dir()
-		return vim.fn.expand("%:p:h")
-	end
+  local function telescope_buffer_dir()
+    return vim.fn.expand("%:p:h")
+  end
 
-	telescope.extensions.file_browser.file_browser({
-		path = "%:p:h",
-		cwd = telescope_buffer_dir(),
-		respect_gitignore = false,
-		hidden = true,
-		grouped = true,
-		previewer = true,
-		initial_mode = "normal",
-		layout_config = { height = 40, width = 160 },
-	})
+  telescope.extensions.file_browser.file_browser({
+    path = "%:p:h",
+    cwd = telescope_buffer_dir(),
+    respect_gitignore = false,
+    hidden = true,
+    grouped = true,
+    previewer = true,
+    initial_mode = "normal",
+    layout_config = { height = 40, width = 160 },
+  })
 end)
 
 -- Harpoon
@@ -152,14 +152,14 @@ local term = require("harpoon.term")
 
 -- Mark a file
 vim.keymap.set("n", "<leader>ha", function()
-	mark.add_file()
+  mark.add_file()
 end)
 
 -- Mark a terminal
 vim.keymap.set("n", "<leader>h1", function()
-	term.gotoTerminal(1)
+  term.gotoTerminal(1)
 end)
 
 vim.keymap.set("n", "<leader>h2", function()
-	term.gotoTerminal(1)
+  term.gotoTerminal(1)
 end)
