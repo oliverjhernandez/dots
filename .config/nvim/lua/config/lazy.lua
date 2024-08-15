@@ -75,8 +75,7 @@ require("lazy").setup({
     { import = "plugins.gitsigns.lazyspec" },
     { import = "plugins.smooth.lazyspec" },
     { import = "plugins.kubectl.lazyspec" },
-    -- { import = "plugins.markview.lazyspec" },
-    { import = "plugins.curl.lazyspec" },
+    { import = "plugins.kulala.lazyspec" },
   },
 
   defaults = {
