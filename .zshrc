@@ -112,3 +112,6 @@ nvm use --silent default
 export EDITOR="nvim"
 
 export JAVA_HOME=`/usr/libexec/java_home -v 17`
+
+# Postgres - Casita
+export CASITA_DB='postgres://postgres:secret@localhost/casita?sslmode=disable'
