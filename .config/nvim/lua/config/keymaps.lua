@@ -65,6 +65,23 @@ end)
 -- Inc Rename
 vim.keymap.set("n", "<leader>rn", ":IncRename ")
 
+-- Kulala
+vim.keymap.set("n", "<leader>tr", function() -- Run test
+  require("kulala").run()
+end)
+vim.keymap.set("n", "<leader>tt", function() -- Replay last test
+  require("kulala").replay()
+end)
+vim.keymap.set("n", "<leader>tc", function() -- Copy test as curl command
+  require("kulala").run()
+end)
+vim.keymap.set("n", "<leader>tj", function() -- Go to next test
+  require("kulala").jump_next()
+end)
+vim.keymap.set("n", "<leader>tk", function() -- Go to previous test
+  require("kulala").jump_prev()
+end)
+
 -- dial
 vim.keymap.set("n", "<C-a>", function()
   require("dial.map").manipulate("increment", "normal")
