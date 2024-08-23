@@ -74,7 +74,7 @@ require("lazy").setup({
     { import = "plugins.harpoon.lazyspec" },
     { import = "plugins.gitsigns.lazyspec" },
     { import = "plugins.smooth.lazyspec" },
-    { import = "plugins.kubectl.lazyspec" },
+    -- { import = "plugins.kubectl.lazyspec" },
     { import = "plugins.kulala.lazyspec" },
   },
 
