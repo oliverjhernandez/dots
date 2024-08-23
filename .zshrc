@@ -66,6 +66,7 @@ export AWS_PAGER="less"
 alias open="open_command"
 alias nv="nvim"
 alias ls="ls --color"
+alias k="kubectl"
 
 # Homebrew
 eval "$(/opt/homebrew/bin/brew shellenv)"
