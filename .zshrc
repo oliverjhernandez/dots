@@ -68,6 +68,7 @@ alias open="open_command"
 alias nv="nvim"
 alias ls="ls --color"
 alias k="kubectl"
+alias t="terraform"
 
 # Homebrew
 eval "$(/opt/homebrew/bin/brew shellenv)"
