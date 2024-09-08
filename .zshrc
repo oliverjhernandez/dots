@@ -69,6 +69,12 @@ alias nv="nvim"
 alias ls="ls --color"
 alias k="kubectl"
 alias t="terraform"
+alias tv="terraform validate"
+alias ta="terraform apply"
+alias ti="terraform init"
+alias tiu="terraform init -upgrade"
+alias tr="terrafirm refresh"
+alias tv="terraform -version"
 
 # Homebrew
 eval "$(/opt/homebrew/bin/brew shellenv)"
