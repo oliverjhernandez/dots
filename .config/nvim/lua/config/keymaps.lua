@@ -69,6 +69,9 @@ vim.keymap.set("n", "<leader>rn", ":IncRename ")
 vim.keymap.set("n", "<leader>tr", function() -- Run test
   require("kulala").run()
 end)
+vim.keymap.set("n", "<leader>ta", function() -- Run all
+  require("kulala").run_all()
+end)
 vim.keymap.set("n", "<leader>tt", function() -- Replay last test
   require("kulala").replay()
 end)
