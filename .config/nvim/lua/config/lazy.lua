@@ -53,7 +53,7 @@ require("lazy").setup({
     { import = "plugins.dial.lazyspec" },
     { import = "plugins.cmp.lazyspec" },
     { import = "plugins.comment.lazyspec" },
-    { import = "plugins.hardtime.lazyspec" },
+    -- { import = "plugins.hardtime.lazyspec" },
     { import = "plugins.mason.lazyspec" },
     { import = "plugins.todo-comments.lazyspec" },
     { import = "plugins.trouble.lazyspec" },
@@ -74,8 +74,8 @@ require("lazy").setup({
     { import = "plugins.harpoon.lazyspec" },
     { import = "plugins.gitsigns.lazyspec" },
     { import = "plugins.smooth.lazyspec" },
-    -- { import = "plugins.kubectl.lazyspec" },
     { import = "plugins.kulala.lazyspec" },
+    { import = "plugins.multicursor.lazyspec" },
   },
 
   defaults = {
