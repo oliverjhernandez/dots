@@ -70,12 +70,13 @@ require("lazy").setup({
     { import = "plugins.zenmode.lazyspec" },
     { import = "plugins.treesitter.lazyspec" },
     { import = "plugins.window-picker.lazyspec" },
-    { import = "plugins.colorizer.lazyspec" },
+    { import = "plugins.tailwindcss.lazyspec" },
     { import = "plugins.harpoon.lazyspec" },
     { import = "plugins.gitsigns.lazyspec" },
     { import = "plugins.smooth.lazyspec" },
     { import = "plugins.kulala.lazyspec" },
     { import = "plugins.multicursor.lazyspec" },
+    { import = "plugins.nvim-tmux-navigation.lazyspec" },
   },
 
   defaults = {
