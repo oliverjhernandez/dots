@@ -122,8 +122,16 @@ export EDITOR="nvim"
 
 export JAVA_HOME=`/usr/libexec/java_home -v 17`
 
-# Postgres - Casita
-export CASITA_DB='postgres://postgres:secret@localhost/casita?sslmode=disable'
+# Postgres - Money Lovers
+export SVR_HOST="localhost"
+export SVR_PORT="8080"
+export DB_HOST="localhost" 
+export DB_PORT="5432"
+export DB_NAME="money_lovers"
+export DB_USER="postgres"
+export DB_ENABLED_SSL="disable"
+export DB_PASSWD="secret"
+export MONEY_LOVERS_DB='postgres://postgres:secret@localhost/money_lovers?sslmode=disable'
 
 # zsh-completions
 
