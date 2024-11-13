@@ -66,7 +66,7 @@ k.set("n", "<leader>tr", function() -- Run test
   require("kulala").run()
 end)
 k.set("n", "<leader>ta", function()
-  require("kulala")
+  require("kulala").run_all()
 end)
 k.set("n", "<leader>tt", function() -- Replay last test
   require("kulala").replay()
