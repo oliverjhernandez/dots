@@ -77,6 +77,7 @@ require("lazy").setup({
     { import = "plugins.kulala.lazyspec" },
     { import = "plugins.multicursor.lazyspec" },
     { import = "plugins.nvim-tmux-navigation.lazyspec" },
+    { import = "plugins.smear-cursor.lazyspec" },
   },
 
   defaults = {
