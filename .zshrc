@@ -108,6 +108,10 @@ function ave {
   aws-vault exec $profile -- eksctl "$@";
 }
 
+function kn {
+  kubectl config set-context --current --namespace=$1
+}
+
 # Set Date
 TODAY=$(date +'%d_%m_%Y')
 DATE=$(date +%Y-%m-%d)
