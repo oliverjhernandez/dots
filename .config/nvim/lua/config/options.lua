@@ -1,47 +1,50 @@
-vim.g.mapleader = " "
+local v = vim
+local vo = v.opt
 
-vim.scriptencoding = "utf-8"
-vim.opt.encoding = "utf-8"
-vim.opt.fileencoding = "utf-8"
+v.g.mapleader = " "
+v.g.lazyvim_picker = "snacks"
 
-vim.opt.number = true
-vim.opt.title = true
-vim.opt.textwidth = 240
-vim.opt.autoindent = true
-vim.opt.smartindent = true
-vim.opt.hlsearch = true
-vim.opt.backup = false
-vim.opt.showcmd = true
-vim.opt.cmdheight = 1
-vim.opt.laststatus = 2
-vim.opt.expandtab = true
-vim.opt.scrolloff = 10
-vim.opt.shell = "zsh"
-vim.opt.backupskip = { "/tmp/*", "/private/tmp/*" }
-vim.opt.inccommand = "split"
-vim.opt.ignorecase = true
-vim.opt.smarttab = true
-vim.opt.breakindent = true
-vim.opt.shiftwidth = 2
-vim.opt.tabstop = 2
-vim.opt.wrap = false
-vim.opt.backspace = { "start", "eol", "indent" }
-vim.opt.path:append({ "**" }) -- Finding files - Search down into subfolders
-vim.opt.wildignore:append({ "*/node_modules/*" })
-vim.opt.splitbelow = true -- Put new windows below current
-vim.opt.splitright = true -- Put new windows right of current
-vim.opt.splitkeep = "cursor"
-vim.opt.mouse = ""
-vim.g.lazyvim_picker = "snacks"
+v.scriptencoding = "utf-8"
+vo.encoding = "utf-8"
+vo.fileencoding = "utf-8"
+
+vo.number = true
+vo.title = true
+vo.textwidth = 240
+vo.autoindent = true
+vo.smartindent = true
+vo.hlsearch = true
+vo.backup = false
+vo.showcmd = true
+vo.cmdheight = 1
+vo.laststatus = 2
+vo.expandtab = true
+vo.scrolloff = 10
+vo.shell = "zsh"
+vo.backupskip = { "/tmp/*", "/private/tmp/*" }
+vo.inccommand = "split"
+vo.ignorecase = true
+vo.smarttab = true
+vo.breakindent = true
+vo.shiftwidth = 2
+vo.tabstop = 2
+vo.wrap = false
+vo.backspace = { "start", "eol", "indent" }
+vo.path:append({ "**" }) -- Finding files - Search down into subfolders
+vo.wildignore:append({ "*/node_modules/*" })
+vo.splitbelow = true -- Put new windows below current
+vo.splitright = true -- Put new windows right of current
+vo.splitkeep = "cursor"
+vo.mouse = ""
 
 -- Undercurl
-vim.cmd([[let &t_Cs = "\e[4:3m"]])
-vim.cmd([[let &t_Ce = "\e[4:0m"]])
+v.cmd([[let &t_Cs = "\e[4:3m"]])
+v.cmd([[let &t_Ce = "\e[4:0m"]])
 
 -- Add asterisks in block comments
-vim.opt.formatoptions:append({ "r" })
+vo.formatoptions:append({ "r" })
 
-vim.cmd([[au BufNewFile,BufRead *.astro setf astro]])
-vim.cmd([[au BufNewFile,BufRead Podfile setf ruby]])
+v.cmd([[au BufNewFile,BufRead *.astro setf astro]])
+v.cmd([[au BufNewFile,BufRead Podfile setf ruby]])
 
-vim.diagnostic.config({ virtual_text = false })
+v.diagnostic.config({ virtual_text = false })
