@@ -8,6 +8,7 @@ v.scriptencoding = "utf-8"
 vo.encoding = "utf-8"
 vo.fileencoding = "utf-8"
 
+vo.relativenumber = false
 vo.number = true
 vo.title = true
 vo.textwidth = 240
