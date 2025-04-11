@@ -63,6 +63,9 @@ export FZF_DEFAULT_COMMAND='ag --hidden -g ""'
 export AWS_PAGER="less"
 
 
+# Environment Variables
+export GOPATH=$HOME/go
+
 # Aliases
 alias open="open_command"
 alias nv="nvim"
@@ -136,6 +139,7 @@ export DB_USER="postgres"
 export DB_ENABLED_SSL="disable"
 export DB_PASSWD="secret"
 export MONEY_LOVERS_DB='postgres://postgres:secret@localhost/money_lovers?sslmode=disable'
+export GREENLIGHT_DB="postgres://postgres:secret@localhost/greenlight?sslmode=disable"
 
 # zsh-completions
 
@@ -148,3 +152,6 @@ if [ -f '/opt/google-cloud-sdk/path.zsh.inc' ]; then . '/opt/google-cloud-sdk/pa
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/opt/google-cloud-sdk/completion.zsh.inc' ]; then . '/opt/google-cloud-sdk/completion.zsh.inc'; fi
+
+# The next line includes go binaries into the PATH 
+PATH=${PATH}:${GOPATH}/bin
