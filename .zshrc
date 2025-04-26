@@ -60,7 +60,8 @@ zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 # zstyle ':completion:*' matcher-list 'r:[[:ascii:]]||[[:ascii:]]=** r:|=* m:{a-z\-}={A-Z\_}'
 
 export FZF_DEFAULT_COMMAND='ag --hidden -g ""'
-export AWS_PAGER="less"
+export AWS_PAGER="less --incsearch"
+export MANPAGER="less --incsearch"
 
 
 # Environment Variables
