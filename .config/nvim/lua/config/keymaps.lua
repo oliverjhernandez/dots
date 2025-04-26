@@ -3,15 +3,9 @@ local opts = { noremap = true, silent = true }
 
 k.set("n", "x", '"_x')
 
--- Increment/decrement
+-- Increment/decrement numbers
 k.set("n", "+", "<C-a>")
 k.set("n", "-", "<C-x>")
-
--- Delete a word backwards
-k.set("n", "dw", 'vb"_d')
-
--- Select all
--- keymap.set("n", "<C-a>", "gg<S-v>G")
 
 -- Save with root permission (not working for now)
 --vim.api.nvim_create_user_command('W', 'w !sudo tee > /dev/null %', {})
