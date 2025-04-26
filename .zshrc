@@ -141,6 +141,7 @@ export DB_ENABLED_SSL="disable"
 export DB_PASSWD="secret"
 export MONEY_LOVERS_DB='postgres://postgres:secret@localhost/money_lovers?sslmode=disable'
 export GREENLIGHT_DB="postgres://postgres:secret@localhost/greenlight?sslmode=disable"
+export SNIPPETBOX_DB="mysql://snippetbox:password@tcp(127.0.0.1:3306)/snippetbox?parseTime=true"
 
 # zsh-completions
 
