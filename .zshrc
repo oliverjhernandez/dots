@@ -157,3 +157,6 @@ if [ -f '/opt/google-cloud-sdk/completion.zsh.inc' ]; then . '/opt/google-cloud-
 
 # The next line includes go binaries into the PATH 
 PATH=${PATH}:${GOPATH}/bin
+
+# VIRTUALENVWRAPPER
+source /opt/homebrew/bin/virtualenvwrapper.sh
