@@ -40,11 +40,11 @@ k.set("t", "<C-\\>", "<C-\\><C-n><C-w>l")
 
 -- Diagnostics
 k.set("n", "<leader>j", function()
-  vim.diagnostic.goto_next()
+  vim.diagnostic.jump({ count = 1, float = true })
 end, opts)
 
 k.set("n", "<leader>k", function()
-  vim.diagnostic.goto_prev()
+  vim.diagnostic.jump({ count = -1, float = true })
 end)
 
 -- Neogen
