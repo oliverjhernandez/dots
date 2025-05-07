@@ -65,7 +65,8 @@ export MANPAGER="less --incsearch"
 
 
 # Environment Variables
-export GOPATH=$HOME/go
+export GOPATH=${HOME}/go
+export K9S_CONFIG_DIR=${HOME}/.config/k9s
 
 # Aliases
 alias open="open_command"
