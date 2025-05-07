@@ -1,0 +1,15 @@
+k9s:
+  cluster: arn:aws:eks:us-east-1:028201126485:cluster/prod-stable-eks
+  namespace:
+    active: all
+    lockFavorites: false
+    favorites:
+    - all
+    - stable
+    - kube-system
+    - default
+  view:
+    active: pod kube-system
+  featureGates:
+    nodeShell: false
+  portForwardAddress: localhost

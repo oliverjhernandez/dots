@@ -1,0 +1,14 @@
+k9s:
+  cluster: minikube
+  namespace:
+    active: kube-system
+    lockFavorites: false
+    favorites:
+    - kube-system
+    - all
+    - default
+  view:
+    active: namespace
+  featureGates:
+    nodeShell: false
+  portForwardAddress: localhost

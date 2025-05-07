@@ -1,0 +1,17 @@
+k9s:
+  cluster: arn:aws:eks:us-east-1:310089926162:cluster/dev-stable-eks
+  namespace:
+    active: all
+    lockFavorites: false
+    favorites:
+    - all
+    - external-secrets
+    - stable-sand
+    - stable
+    - kube-system
+    - default
+  view:
+    active: pod
+  featureGates:
+    nodeShell: false
+  portForwardAddress: localhost

@@ -1,0 +1,13 @@
+k9s:
+  cluster: teleport.env.layer7.tel
+  namespace:
+    active: all
+    lockFavorites: false
+    favorites:
+      - all
+      - default
+  view:
+    active: ns
+  featureGates:
+    nodeShell: false
+  proxy: null
