@@ -83,10 +83,6 @@ k.set("n", "<C-x>", function()
   require("dial.map").manipulate("decrement", "normal")
 end)
 
--- Harpoon
-local mark = require("harpoon.mark")
-local term = require("harpoon.term")
-
 -- Mark a file
 k.set("n", "<leader>ha", function()
   mark.add_file()
@@ -99,74 +95,4 @@ end)
 
 k.set("n", "<leader>h2", function()
   term.gotoTerminal(1)
-end)
-
--- Multicursor
-local mc = require("multicursor-nvim")
-
-mc.setup()
--- Add cursors above/below the main cursor.
-k.set({ "n", "v" }, "<up>", function()
-  mc.addCursor("k")
-end)
-k.set({ "n", "v" }, "<down>", function()
-  mc.addCursor("j")
-end)
--- Add a cursor and jump to the next word under cursor.
-k.set({ "n", "v" }, "<c-n>", function()
-  mc.addCursor("*")
-end)
--- Jump to the next word under cursor but do not add a cursor.
-k.set({ "n", "v" }, "<c-s>", function()
-  mc.skipCursor("*")
-end)
--- Rotate the main cursor.
-k.set({ "n", "v" }, "<left>", mc.nextCursor)
-k.set({ "n", "v" }, "<right>", mc.prevCursor)
-
--- Delete the main cursor.
-k.set({ "n", "v" }, "<leader>x", mc.deleteCursor)
-
--- Add and remove cursors with control + left click.
-k.set("n", "<c-leftmouse>", mc.handleMouse)
-
-k.set({ "n", "v" }, "<c-q>", function()
-  if mc.cursorsEnabled() then
-    -- Stop other cursors from moving.
-    -- This allows you to reposition the main cursor.
-    mc.disableCursors()
-  else
-    mc.addCursor()
-  end
-end)
-
-k.set("n", "<esc>", function()
-  if not mc.cursorsEnabled() then
-    mc.enableCursors()
-  elseif mc.hasCursors() then
-    mc.clearCursors()
-  else
-    -- Default <esc> handler.
-  end
-end)
-
--- Align cursor columns.
-k.set("n", "<leader>a", mc.alignCursors)
-
--- Split visual selections by regex.
-k.set("v", "S", mc.splitCursors)
-
--- Append/insert for each line of visual selections.
-k.set("v", "I", mc.insertVisual)
-k.set("v", "A", mc.appendVisual)
-
--- match new cursors within visual selections by regex.
-k.set("v", "M", mc.matchCursors)
-
--- Rotate visual selection contents.
-k.set("v", "<leader>t", function()
-  mc.transposeCursors(1)
-end)
-k.set("v", "<leader>T", function()
-  mc.transposeCursors(-1)
 end)
