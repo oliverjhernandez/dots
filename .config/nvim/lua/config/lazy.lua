@@ -55,6 +55,7 @@ require("lazy").setup({
     { import = "plugins.treesitter.lazyspec" },
     -- { import = "plugins.smooth.lazyspec" },
     { import = "plugins.kulala.lazyspec" },
+    { import = "plugins.gitsigns.lazyspec" },
     { import = "plugins.nvim-tmux-navigation.lazyspec" },
     { import = "plugins.smear-cursor.lazyspec" },
     { import = "plugins.auto-dark-mode.lazyspec" },
