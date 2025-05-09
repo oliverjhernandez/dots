@@ -1,14 +1,10 @@
 k9s:
-  cluster: teleport.env.layer7.tel
+  cluster: shared-sandbox/cird60pd0i29tod5ejag
   namespace:
-    active: prototype
+    active: proxysql
     lockFavorites: false
     favorites:
-      - prototype
-      - prod-services
-      - external-dns
-      - ccc2
-      - all
+      - proxysql
       - default
   view:
     active: ns
