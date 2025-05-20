@@ -57,7 +57,6 @@ require("lazy").setup({
     { import = "plugins.kulala.lazyspec" },
     { import = "plugins.gitsigns.lazyspec" },
     { import = "plugins.nvim-tmux-navigation.lazyspec" },
-    { import = "plugins.smear-cursor.lazyspec" },
     { import = "plugins.auto-dark-mode.lazyspec" },
   },
 
