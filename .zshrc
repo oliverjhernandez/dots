@@ -80,6 +80,16 @@ alias ti="terraform init"
 alias tiu="terraform init -upgrade"
 alias tr="terrafirm refresh"
 alias tv="terraform -version"
+alias gs="git status --short"
+alias gd="git diff"
+alias gl="git log --all --graph --pretty=\
+  format:'%C(magenta)%h %C(white) %an %ar%C(auto) %d%n%s%n'"
+alias gcl="git clone"
+
+# TMUX
+if [[ -n "$TMUX" ]]; then
+  bindkey '^A' beginning-of-line
+fi
 
 # Homebrew
 eval "$(/opt/homebrew/bin/brew shellenv)"
