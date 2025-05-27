@@ -1,0 +1,69 @@
+[user]
+  name = Oliver Hernández
+  email = oliverjhernandez@gmail.com
+  ; signingKey = 095BFDF39F4E48F9
+
+[init]
+	defaultBranch = main
+
+; [commit]
+;   gpgsign = true
+
+[core]
+  editor = nvim
+	excludesfile = /Users/olhernandez/.gitignore
+  compression = 9
+  whitespace = error
+  preloadindex = true
+
+[advice]
+  addEmptyPathspec = false
+  pushNonFastForward = false
+  statusHints = false
+
+[url "git@github.com:oliverjhernandez/"]
+  insteadOf = "oli:"
+
+[url "git@github.com:"]
+  insteadOf = "gh:"
+
+[url "git@bitbucket.org:Layer7mx/"]
+  insteadOf = "l7:"
+
+[status]
+  branch = true
+  showStash = true
+  showUntrackedFiles = all
+
+[push]
+  autoSetupRemote = true
+  default = current
+  followTags = true
+
+[pull]
+  default = current
+  rebase = true
+
+[rebase]
+  autoStash = true
+  missingCommitsCheck = warn
+
+[log]
+  abbrevCommit = true
+  graphColors = blue,yellow,cyan,magenta,green,red
+
+[color "decorate"]
+  HEAD = red
+  branch = blue
+  tag = yellow
+  remoteBranch = magenta
+
+[branch]
+  sort = -committerdate
+
+[tag]
+  sort = -taggerdate
+
+[pager]
+  branch = false
+  tag = false
