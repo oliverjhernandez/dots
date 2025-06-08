@@ -18,6 +18,7 @@ return {
         less = { "prettier" },
         html = { "prettier" },
         yaml = { "prettier" },
+        astro = { "prettier" },
         markdown = { "prettier" },
         "markdown.mdx" == { "prettier" },
         graphql = { "prettier" },
