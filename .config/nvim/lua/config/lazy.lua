@@ -27,16 +27,6 @@ require("lazy").setup({
       },
     },
     { import = "plugins" },
-    { import = "plugins.dial.lazyspec" },
-    { import = "plugins.goto-preview.lazyspec" },
-    { import = "plugins.hipatterns.lazyspec" },
-    { import = "plugins.lsp.lazyspec" },
-    { import = "plugins.toggleterm.lazyspec" },
-    { import = "plugins.noice.lazyspec" },
-    { import = "plugins.treesitter.lazyspec" },
-    { import = "plugins.gitsigns.lazyspec" },
-    { import = "plugins.nvim-tmux-navigation.lazyspec" },
-    { import = "plugins.auto-dark-mode.lazyspec" },
   },
 
   defaults = {
