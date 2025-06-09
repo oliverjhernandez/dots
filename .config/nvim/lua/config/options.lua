@@ -7,7 +7,11 @@ v.g.lazyvim_picker = "snacks"
 v.scriptencoding = "utf-8"
 vo.encoding = "utf-8"
 vo.fileencoding = "utf-8"
-vo.guicursor = "a:ver75"
+
+vim.opt.guicursor = {
+  "n-v:block-Cursor/lCursor",
+  "i-c-ci-ve:block-TermCursor",
+}
 
 vo.relativenumber = false
 vo.number = true
