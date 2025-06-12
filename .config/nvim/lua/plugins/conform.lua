@@ -17,7 +17,7 @@ return {
         scss = { "prettier" },
         less = { "prettier" },
         html = { "prettier" },
-        yaml = { "prettier" },
+        yaml = { "yamlls" },
         astro = { "prettier" },
         markdown = { "prettier" },
         "markdown.mdx" == { "prettier" },

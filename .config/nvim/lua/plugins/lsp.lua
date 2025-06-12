@@ -35,6 +35,10 @@ return {
                   kubernetes = "*.{yml,yaml}",
                 },
                 keyOrdering = true,
+                format = {
+                  enable = true,
+                  singleQuote = false,
+                },
               },
             },
           },
