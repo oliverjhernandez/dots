@@ -1,5 +1,15 @@
 return {
   "echasnovski/mini.files",
+  opts = {
+    windows = {
+      -- Width of focused window
+      width_focus = 30,
+      -- Width of non-focused window
+      width_nofocus = 20,
+      -- Width of preview window
+      width_preview = 60,
+    },
+  },
   keys = {
     {
       "<leader>e",
