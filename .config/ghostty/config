@@ -4,4 +4,4 @@ font-size = 15
 font-family-bold = mononoki Bold
 font-family-italic = mononoki Italic
 font-family-bold-italic = mononoki Bold Italic
-theme = dark:catppuccin-macchiato,light:catppuccin-latte
+theme = GruvboxDark
