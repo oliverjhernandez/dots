@@ -32,15 +32,6 @@ k.set("n", "<C-\\>", ":ToggleTerm size=40 direction=float<cr>")
 -- keymap.set("n", "<leader>th", ":ToggleTerm size=100 direction=horizontal<cr>")
 k.set("t", "<C-\\>", "<C-\\><C-n><C-w>l")
 
--- Diagnostics
-k.set("n", "<leader>j", function()
-  vim.diagnostic.jump({ count = 1, float = true })
-end, opts)
-
-k.set("n", "<leader>k", function()
-  vim.diagnostic.jump({ count = -1, float = true })
-end)
-
 -- Neogen
 k.set("n", "<leader>cc", function()
   require("neogen").generate({})
