@@ -1,3 +1,6 @@
+# ### Performance test
+# zmodload zsh/zprof
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -131,10 +134,11 @@ function kn {
 TODAY=$(date +'%d_%m_%Y')
 DATE=$(date +%Y-%m-%d)
 
-export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
-[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
-nvm use --silent default
+# commented because it was making startup too long
+# export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+# [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+# nvm use --silent default
 
 # Exports
 export EDITOR="nvim"
@@ -146,11 +150,11 @@ export SVR_HOST="localhost"
 export SVR_PORT="8080"
 export DB_HOST="localhost" 
 export DB_PORT="5432"
-export DB_NAME="money_lovers"
+export DB_NAME="mlovers"
 export DB_USER="postgres"
 export DB_ENABLED_SSL="disable"
 export DB_PASSWD="secret"
-export MONEY_LOVERS_DB='postgres://postgres:secret@localhost/money_lovers?sslmode=disable'
+export MLOVERS_DB='postgres://postgres:secret@localhost/mlovers?sslmode=disable'
 export GREENLIGHT_DB="postgres://postgres:secret@localhost/greenlight?sslmode=disable"
 export SNIPPETBOX_DB="mysql://snippetbox:password@tcp(127.0.0.1:3306)/snippetbox?parseTime=true"
 
@@ -171,3 +175,6 @@ PATH=${PATH}:${GOPATH}/bin
 
 # VIRTUALENVWRAPPER
 source /opt/homebrew/bin/virtualenvwrapper.sh
+
+# ### Performance test
+# zprof
