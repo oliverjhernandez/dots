@@ -42,6 +42,7 @@ vo.splitbelow = true -- Put new windows below current
 vo.splitright = true -- Put new windows right of current
 vo.splitkeep = "cursor"
 vo.mouse = ""
+vo.list = false
 
 -- Undercurl
 v.cmd([[let &t_Cs = "\e[4:3m"]])
