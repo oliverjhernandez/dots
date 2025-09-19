@@ -78,6 +78,7 @@ alias ls="ls --color"
 alias k="kubectl"
 alias t="terraform"
 alias tv="terraform validate"
+alias tp="terraform plan"
 alias ta="terraform apply"
 alias ti="terraform init"
 alias tiu="terraform init -upgrade"
@@ -88,6 +89,8 @@ alias gd="git diff"
 alias gl="git log --all --graph --pretty=\
   format:'%C(magenta)%h %C(white) %an %ar%C(auto) %d%n%s%n'"
 alias gcl="git clone"
+alias tsh='TERM=xterm-256color tsh '
+alias tshl='tsh kube login --all --set-context-name "{{.KubeName}}" --proxy=services.layer7.tel:443 --user=oliver@layer7.mx'
 
 # TMUX
 if [[ -n "$TMUX" ]]; then
