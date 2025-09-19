@@ -12,6 +12,7 @@
     "lazyvim.plugins.extras.lang.docker",
     "lazyvim.plugins.extras.lang.git",
     "lazyvim.plugins.extras.lang.go",
+    "lazyvim.plugins.extras.lang.helm",
     "lazyvim.plugins.extras.lang.json",
     "lazyvim.plugins.extras.lang.markdown",
     "lazyvim.plugins.extras.lang.python",
@@ -30,8 +31,8 @@
   ],
   "install_version": 7,
   "news": {
-    "NEWS.md": "10960",
-    "doc/news.txt": "24841"
+    "NEWS.md": "11866",
+    "doc/news.txt": "25358"
   },
   "version": 8
 }
