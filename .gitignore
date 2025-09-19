@@ -25,3 +25,4 @@ node_modules
 .aws/sso/cache
 
 .config/k9s/clusters
+.config/tmux/plugins
