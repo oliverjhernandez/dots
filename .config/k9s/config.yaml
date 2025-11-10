@@ -8,7 +8,7 @@ k9s:
   noExitOnCtrlC: false
   portForwardAddress: localhost
   ui:
-    skin: rose-pine-dawn
+    skin: tokyo-night
     enableMouse: false
     headless: false
     logoless: false
