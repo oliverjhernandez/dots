@@ -70,6 +70,7 @@ export MANPAGER="less --incsearch"
 # Environment Variables
 export GOPATH=${HOME}/go
 export K9S_CONFIG_DIR=${HOME}/.config/k9s
+export XDG_DATA_DIRS=$XDG_DATA_DIRS:${HOME}/.config/k9s
 
 # Aliases
 alias open="open_command"
@@ -90,7 +91,7 @@ alias gl="git log --all --graph --pretty=\
   format:'%C(magenta)%h %C(white) %an %ar%C(auto) %d%n%s%n'"
 alias gcl="git clone"
 alias tsh='TERM=xterm-256color tsh '
-alias tshl='tsh kube login --all --set-context-name "{{.KubeName}}" --proxy=services.layer7.tel:443 --user=oliver@layer7.mx'
+alias tshl='tsh kube login --all --set-context-name "{{.KubeName}}" --mfa-mode=otp --proxy=services.layer7.tel:443 --user=oliver@layer7.mx --kube-namespace default'
 
 # TMUX
 if [[ -n "$TMUX" ]]; then
@@ -105,32 +106,13 @@ eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
 
 # FUNCTIONS
-# AWS Vault for Terraform
-function avt {
-  profile=$1; shift
-  aws-vault exec $profile -- terraform "$@";
-}
-
-# AWS Vault for AWS
-function ava {
-  profile=$1; shift
-  aws-vault exec $profile -- aws "$@";
-}
-
-# AWS Vault for Kubectl
-function avk {
-  profile=$1; shift
-  aws-vault exec $profile -- kubectl "$@";
-}
-
-# EKS CLI
-function ave {
-  profile=$1; shift
-  aws-vault exec $profile -- eksctl "$@";
-}
-
 function kn {
   kubectl config set-context --current --namespace=$1
+}
+
+function tshl {
+  tsh login --proxy=services.layer7.tel:443 --auth=local --user=oliver@layer7.mx services.layer7.tel
+  tsh kube login --all --set-context-name "{{.KubeName}}"
 }
 
 # Set Date
