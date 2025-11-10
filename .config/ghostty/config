@@ -1,7 +1,5 @@
 macos-option-as-alt = true
 font-family = JetBrainsMono Nerd Font Mono
 font-size = 15
-font-family-bold = mononoki Bold
-font-family-italic = mononoki Italic
-font-family-bold-italic = mononoki Bold Italic
-theme = dark:rose-pine-moon,light:rose-pine-dawn
+theme = TokyoNight Storm
+keybind = shift+enter=text:\x1b\r
