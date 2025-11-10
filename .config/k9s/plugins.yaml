@@ -1,0 +1,41 @@
+plugins:
+  start-debian-pod:
+    shortCut: Shift-D
+    confirm: true
+    description: "Start an debian pod in current context/namespace"
+    scopes:
+      - po
+    command: sh
+    background: true
+    args:
+      - -c
+      - |
+        echo "PLUGIN TRIGGERED $(date)" >> /tmp/k9s-plugin.log
+        cat <<EOF | kubectl apply -f - --context $CONTEXT --namespace $NAMESPACE
+        apiVersion: v1
+        kind: Pod
+        metadata:
+          name: debug
+          labels:
+            app: debian
+            debug: "1"
+        spec:
+          restartPolicy: Never
+          containers:
+            - name: debian
+              image: debian:bookworm-slim
+              command: ["sleep", "infinity"]
+              imagePullPolicy: Always
+              securityContext:
+                runAsUser: 0
+                runAsGroup: 0
+              stdin: true
+              tty: true
+              resources:
+                requests:
+                  cpu: 100m
+                  memory: 100Mi
+                limits:
+                  cpu: 100m
+                  memory: 100Mi
+        EOF
