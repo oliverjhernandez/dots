@@ -1,120 +1,115 @@
-foreground: &foreground "#c0caf5"
-background: &background "#24283b"
-current_line: &current_line "#8c6c3e"
-selection: &selection "#364a82"
-comment: &comment "#565f89"
-cyan: &cyan "#7dcfff"
-green: &green "#9ece6a"
-yellow: &yellow "#e0af68"
-orange: &orange "#ff9e64"
-magenta: &magenta "#bb9af7"
-blue: &blue "#7aa2f7"
-red: &red "#f7768e"
-purple: &purple "#9d7cd8"
-pink: &pink "#bb9af7"
-white: &white "#a9b1d6"
-black: &black "#1d202f"
-
 k9s:
-  # General K9s styles
   body:
-    fgColor: *foreground
-    bgColor: default
-    logoColor: *blue
-  # Command prompt styles
+    fgColor: "#c0caf5"
+    bgColor: "#24283b"
+    logoColor: "#7aa2f7"
+
   prompt:
-    fgColor: *foreground
-    bgColor: *background
-    suggestColor: *orange
-  # ClusterInfoView styles.
+    fgColor: "#c0caf5"
+    bgColor: "#1f2335"
+    suggestColor: "#7dcfff"
+
   info:
-    fgColor: *magenta
-    sectionColor: *foreground
-  # Dialog styles.
+    fgColor: "#7dcfff"
+    sectionColor: "#7aa2f7"
+
   dialog:
-    fgColor: *foreground
-    bgColor: default
-    buttonFgColor: *foreground
-    buttonBgColor: *magenta
-    buttonFocusFgColor: *background
-    buttonFocusBgColor: *foreground
-    labelFgColor: *comment
-    fieldFgColor: *foreground
+    fgColor: "#c0caf5"
+    bgColor: "#1f2335"
+    buttonFgColor: "#c0caf5"
+    buttonBgColor: "#292e42"
+    buttonFocusFgColor: "#24283b"
+    buttonFocusBgColor: "#7dcfff"
+    labelFgColor: "#7aa2f7"
+    fieldFgColor: "#c0caf5"
+
   frame:
-    # Borders styles.
     border:
-      fgColor: *selection
-      focusColor: *foreground
+      fgColor: "#7aa2f7"
+      focusColor: "#7dcfff"
+
     menu:
-      fgColor: *foreground
-      keyColor: *magenta
-      # Used for favorite namespaces
-      numKeyColor: *magenta
-    # CrumbView attributes for history navigation.
+      fgColor: "#c0caf5"
+      keyColor: "#bb9af7"
+      numKeyColor: "#9ece6a"
+      highlightFgColor: "#24283b"
+      highlightBgColor: "#7dcfff"
+
     crumbs:
-      fgColor: *white
-      bgColor: *cyan
-      activeColor: *yellow
-    # Resource status and update styles
+      fgColor: "#24283b"
+      bgColor: "#7aa2f7"
+      activeColor: "#7dcfff"
+
     status:
-      newColor: *magenta
-      modifyColor: *blue
-      addColor: *green
-      errorColor: *red
-      highlightcolor: *orange
-      killColor: *comment
-      completedColor: *comment
-    # Border title styles.
+      newColor: "#7dcfff"
+      modifyColor: "#e0af68"
+      addColor: "#9ece6a"
+      errorColor: "#f7768e"
+      highlightColor: "#ff9e64"
+      killColor: "#565f89"
+      completedColor: "#565f89"
+
     title:
-      fgColor: *foreground
-      bgColor: default
-      highlightColor: *blue
-      counterColor: *magenta
-      filterColor: *magenta
+      fgColor: "#7dcfff"
+      bgColor: "#24283b"
+      highlightColor: "#bb9af7"
+      counterColor: "#7aa2f7"
+      filterColor: "#9ece6a"
+
   views:
-    # Charts skins...
     charts:
-      bgColor: default
+      bgColor: "#24283b"
       defaultDialColors:
-        - *blue
-        - *red
+        - "#7aa2f7"
+        - "#7dcfff"
       defaultChartColors:
-        - *blue
-        - *red
-    # TableView attributes.
+        - "#7aa2f7"
+        - "#7dcfff"
+      resourceColors:
+        cpu:
+          - "#7aa2f7"
+          - "#7dcfff"
+        mem:
+          - "#9ece6a"
+          - "#e0af68"
+
     table:
-      fgColor: *foreground
-      bgColor: default
-      cursorFgColor: *background
-      cursorBgColor: *background
-      markColor: darkgoldenrod
-      # Header row styles.
+      fgColor: "#c0caf5"
+      bgColor: "#24283b"
+      cursorFgColor: "#24283b"
+      cursorBgColor: "#7dcfff"
+      markColor: "#ff9e64"
+
       header:
-        fgColor: *foreground
-        bgColor: default
-        sorterColor: *cyan
-    # Xray view attributes.
+        fgColor: "#7aa2f7"
+        bgColor: "#24283b"
+        sorterColor: "#bb9af7"
+
     xray:
-      fgColor: *foreground
-      bgColor: default
-      cursorColor: *current_line
-      graphicColor: *blue
+      fgColor: "#c0caf5"
+      bgColor: "#24283b"
+      cursorColor: "#7dcfff"
+      cursorTextColor: "#24283b"
+      graphicColor: "#9d7cd8"
       showIcons: false
-    # YAML info styles.
+
     yaml:
-      keyColor: *magenta
-      colonColor: *blue
-      valueColor: *foreground
-    # Logs styles.
+      keyColor: "#7dcfff"
+      colonColor: "#565f89"
+      valueColor: "#9ece6a"
+
     logs:
-      fgColor: *foreground
-      bgColor: default
+      fgColor: "#c0caf5"
+      bgColor: "#24283b"
       indicator:
-        fgColor: *foreground
-        bgColor: *selection
+        fgColor: "#7dcfff"
+        bgColor: "#1f2335"
+        toggleOnColor: "#9ece6a"
+        toggleOffColor: "#565f89"
+
     help:
-      fgColor: *foreground
-      bgColor: default
-      indicator:
-        fgColor: *red
-        bgColor: *selection
+      fgColor: "#c0caf5"
+      bgColor: "#24283b"
+      keyColor: "#7dcfff"
+      numKeyColor: "#bb9af7"
+      sectionColor: "#7aa2f7"

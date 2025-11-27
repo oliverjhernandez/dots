@@ -2,7 +2,7 @@ plugins:
   start-debian-pod:
     shortCut: Shift-D
     confirm: true
-    description: "Start an debian pod in current context/namespace"
+    description: "Debug POD"
     scopes:
       - po
     command: sh
