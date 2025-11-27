@@ -101,6 +101,31 @@ fi
 # Homebrew
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
+# Zellij
+# Function to get git root directory name
+git_root_name() {
+    local git_root=$(git rev-parse --show-toplevel 2>/dev/null)
+    if [ -n "$git_root" ]; then
+        basename "$git_root"
+    fi
+}
+
+# Zellij auto-naming hook
+zellij_tab_name_update() {
+    if [[ -n $ZELLIJ ]]; then
+        local tab_name=""
+        tab_name=$(git_root_name)
+        if [[ -n $tab_name ]]; then
+            command nohup zellij action rename-tab "$tab_name" >/dev/null 2>&1
+        fi
+    fi
+}
+
+# Hook into directory changes
+add-zsh-hook chpwd zellij_tab_name_update
+
+# Also run on shell startup
+zellij_tab_name_update
 # Shell integrations
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
