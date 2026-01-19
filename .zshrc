@@ -31,7 +31,12 @@ zinit light Aloxaf/fzf-tab
 zinit snippet OMZP::git
 
 # Load autocompletions
-autoload -U compinit && compinit
+autoload -Uz compinit
+if [[ -n ${HOME}/.zcompdump(#qN.mh+24) ]]; then
+    compinit
+else
+    compinit -C
+fi
 zinit cdreplay -q
 
 # History Config
@@ -183,8 +188,17 @@ if [ -f '/opt/google-cloud-sdk/completion.zsh.inc' ]; then . '/opt/google-cloud-
 # The next line includes go binaries into the PATH 
 PATH=${PATH}:${GOPATH}/bin
 
-# VIRTUALENVWRAPPER
-source /opt/homebrew/bin/virtualenvwrapper.sh
+# VIRTUALENVWRAPPER Lazy loading
+workon() {
+    unset -f workon
+    source /opt/homebrew/bin/virtualenvwrapper.sh
+    workon "$@"
+}
+mkvirtualenv() {
+    unset -f mkvirtualenv
+    source /opt/homebrew/bin/virtualenvwrapper.sh
+    mkvirtualenv "$@"
+}
 
 # ### Performance test
 # zprof
