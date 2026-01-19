@@ -1,9 +1,5 @@
 return {
-	{
-		enabled = true,
-		"gen740/SmoothCursor.nvim",
-		config = function()
-			require("smoothcursor").setup()
-		end,
-	},
+  "gen740/SmoothCursor.nvim",
+  event = "VeryLazy",
+  opts = {},
 }

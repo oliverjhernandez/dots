@@ -1,14 +1,11 @@
 return {
   "mistweaverco/kulala.nvim",
-  keys = {
-    { "<leader>Rs", desc = "Send request" },
-    { "<leader>Ra", desc = "Send all requests" },
-    { "<leader>Rb", desc = "Open scratchpad" },
-  },
   ft = { "http", "rest" },
-  opts = {
-    global_keymaps = false,
-    global_keymaps_prefix = "<leader>R",
-    kulala_keymaps_prefix = "",
+  keys = {
+    { "<leader>Rs", "<cmd>lua require('kulala').run()<cr>", desc = "Send request" },
+    { "<leader>Ra", "<cmd>lua require('kulala').run_all()<cr>", desc = "Send all requests" },
+    { "<leader>Ri", "<cmd>lua require('kulala').inspect()<cr>", desc = "Inspect request" },
+    { "<leader>Rt", "<cmd>lua require('kulala').toggle_view()<cr>", desc = "Toggle body/headers" },
   },
+  opts = {},
 }

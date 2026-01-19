@@ -20,6 +20,7 @@ return {
         "rust",
         "bash",
         "jsdoc",
+        "json",
         "markdown",
         "markdown_inline",
         "query",

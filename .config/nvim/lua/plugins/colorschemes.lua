@@ -1,6 +1,7 @@
 return {
   -- { "catppuccin/nvim", name = "catppuccin" },
   { "folke/tokyonight.nvim", lazy = false, opts = {} },
+  -- { "projekt0n/github-nvim-theme", lazy = false, priority = 1000, name = "github-theme" },
   -- {
   --   "sainnhe/gruvbox-material",
   --   lazy = true,

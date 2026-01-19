@@ -1,30 +1,10 @@
 return {
-
-  -- formatter
-  {
-    "stevearc/conform.nvim",
-    optional = true,
-    opts = {
-      formatters_by_ft = {
-        templ = { "templ" },
-        go = { "goimports", "gofmt" },
-        javascript = { "prettier" },
-        javascriptreact = { "prettier" },
-        typescript = { "prettier" },
-        typescriptreact = { "prettier" },
-        vue = { "prettier" },
-        css = { "prettier" },
-        scss = { "prettier" },
-        less = { "prettier" },
-        html = { "prettier" },
-        yaml = { "yamlls" },
-        astro = { "prettier" },
-        markdown = { "prettier" },
-        "markdown.mdx" == { "prettier" },
-        graphql = { "prettier" },
-        handlebars = { "prettier" },
-        java = { "google-java-format" },
-      },
+  "stevearc/conform.nvim",
+  opts = {
+    formatters_by_ft = {
+      go = { "goimports", "gofmt" },
+      templ = { "templ" },
+      ["markdown.mdx"] = { "prettier" },
     },
   },
 }
