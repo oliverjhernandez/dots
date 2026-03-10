@@ -1,9 +1,5 @@
 return {
   {
-    "nvim-neo-tree/neo-tree.nvim",
-    enabled = false,
-  },
-  {
     "stevearc/oil.nvim",
     dependencies = { "nvim-tree/nvim-web-devicons" },
     opts = {
@@ -26,10 +22,10 @@ return {
         ["q"] = { "actions.close", mode = "n" },
         ["<C-s>"] = { "actions.select", opts = { horizontal = true } },
         ["<C-v>"] = { "actions.select", opts = { vertical = true } },
-	['yp'] = {
-          desc = 'Copy filepath to system clipboard',
-          callback = function ()
-            require('oil.actions').copy_entry_path.callback()
+        ["yp"] = {
+          desc = "Copy filepath to system clipboard",
+          callback = function()
+            require("oil.actions").copy_entry_path.callback()
             vim.fn.setreg("+", vim.fn.getreg(vim.v.register))
           end,
         },
