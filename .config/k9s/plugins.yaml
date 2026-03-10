@@ -23,7 +23,7 @@ plugins:
           restartPolicy: Never
           containers:
             - name: debian
-              image: debian:bookworm-slim
+              image: nicolaka/netshoot
               command: ["sleep", "infinity"]
               imagePullPolicy: Always
               securityContext:
